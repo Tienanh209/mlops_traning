@@ -1,88 +1,118 @@
-# Introduction to MLOps Training
+# MLOps Training
 
-A comprehensive hands-on training program covering the fundamentals of MLOps, infrastructure automation, model deployment, and CI/CD practices.
+**Hands-on training for MLOps infrastructure, deployment, and CI/CD**
 
-## 📚 Course Overview
+## Quick Start
 
-This training is designed to equip you with practical skills in building, deploying, and maintaining machine learning systems in production environments.
+1. **Start Learning** - Browse the [Study Guide](./docs/) in the `docs/` folder
+2. **Practice Labs** - Run exercises in the `module-X/` folders
 
-### Learning Objectives
+```
+Start here:  docs/README.md  →  Complete study guide
+Then:        module-01/      →  Hands-on labs
+```
 
-- Set up development environments with Docker and cloud infrastructure
-- Deploy machine learning models via batch jobs, web APIs, and streaming services
-- Implement testing strategies and CI/CD pipelines for ML systems
-- Understand infrastructure-as-code practices with Terraform
-
-## 🗂️ Course Structure
+## Course Overview
 
 | Module | Topic | Description | Technologies |
 |--------|-------|-------------|--------------|
-| 1 | Infrastructure & Prerequisites | Build your dev environment with Docker, AWS, and containerized deployment basics | Docker, AWS, Terraform, Cloud Shells |
-| 2 | Model Deployment | Ship models via batch jobs, web APIs, and streaming services | FastAPI, Docker, AWS Lambda, AWS Kinesis |
-| 3 | Testing & CI/CD | Add testing, CI/CD, and cloud infrastructure fundamentals | GitHub Actions, LocalStack |
+| 1 | Infrastructure & Prerequisites | Docker, AWS, Terraform fundamentals | Docker, AWS, Terraform, LocalStack |
+| 2 | Model Deployment | Batch, API, streaming deployments | FastAPI, Docker, AWS Lambda |
+| 3 | Testing & CI/CD | Testing strategies and CI/CD pipelines | GitHub Actions, pytest |
 
-## 📂 Repository Structure
+## Repository Structure
 
 ```
-mlops-training/
-├── module-01/            # Infrastructure & Prerequisites
-│   ├── docker/           # Docker fundamentals and containerization
-│   ├── aws/              # AWS services and cloud setup
-│   ├── terraform/        # Infrastructure as Code examples
-│   ├── exercises/        # Practice exercises
-│   └── solution/         # Exercise solutions
-├── module-02/            # Model Deployment
-│   ├── batch-api/        # Batch and API deployment patterns
-│   ├── streaming/        # Real-time streaming deployments
-│   ├── exercises/        # Practice exercises
-│   └── solution/         # Exercise solutions
-├── module-03/            # Testing & CI/CD
-│   ├── testing/          # Testing strategies for ML systems
-│   ├── cicd/             # CI/CD pipeline implementations
-│   ├── exercises/        # Practice exercises
-│   └── solution/         # Exercise solutions
-├── docs/                 # Additional documentation
-├── assets/               # Images, diagrams, and reference materials
-└── .github/              # GitHub Actions workflows
+mlops_training/
+├── docs/                          # 📖 CONCEPTUAL LEARNING
+│   ├── README.md                  #   Study guide and navigation
+│   ├── module-01/                 #   Module 1 theory and guides
+│   │   ├── docker/                #   - Docker concepts
+│   │   ├── terraform/             #   - Terraform IaC guide
+│   │   └── aws/                   #   - AWS CLF-C02 exam prep
+│   ├── module-02/                 #   Module 2 theory
+│   └── module-03/                 #   Module 3 theory
+│
+├── module-01/                     # 🛠️ LAB & PRACTICE CODE
+│   ├── docker/basics/             #   Docker containers and compose
+│   ├── terraform/basics/          #   Terraform configurations
+│   └── aws/localstack/            #   LocalStack for AWS practice
+│
+├── module-02/                     #   Model deployment labs
+│   └── batch-api/fastapi/         #   FastAPI deployment
+│
+├── module-03/                     #   Testing and CI/CD labs
+│   └── testing/                   #   Testing frameworks
+│
+└── assets/                        # Images and diagrams
 ```
 
-## 🚀 Getting Started
+## How to Use This Training
 
-### Prerequisites
+### For Each Topic
 
-- Basic knowledge of Python
-- Understanding of machine learning concepts
-- Familiarity with command-line interface
+1. **Read the theory** in `docs/module-X/`
+2. **Practice with labs** in `module-X/`
+3. **Experiment** with configurations
+4. **Build your own** variations
 
-### Setup
+### Example: Learning Docker
 
-1. Clone the repository:
-   ```bash
-   git clone <repository-url>
-   cd mlops-training
-   ```
+```bash
+# 1. Read the conceptual guide
+cat docs/module-01/docker/basics.md
 
-2. Navigate to the first module:
-   ```bash
-   cd module-01
-   ```
+# 2. Navigate to the lab
+cd module-01/docker/basics
 
-3. Follow the module README to set up your environment
+# 3. Run the exercises
+docker compose up -d
 
-## 📖 Module Guides
+# 4. Experiment and learn
+docker compose logs -f
+```
 
-- [Module 1: Infrastructure & Prerequisites](./module-01/README.md)
-- [Module 2: Model Deployment](./module-02/README.md)
-- [Module 3: Testing & CI/CD](./module-03/README.md)
+### Example: Learning AWS with LocalStack
 
-## 🤝 Contributing
+```bash
+# 1. Read AWS service guide
+cat docs/module-01/aws/storage-services.md
 
-This is a training repository. For contribution guidelines, see [CONTRIBUTING.md](./CONTRIBUTING.md)
+# 2. Start LocalStack
+cd module-01/aws/localstack
+cp .env.example .env
+docker compose up -d
 
-## 📄 License
+# 3. Practice S3 operations
+aws --endpoint-url=http://localhost:4566 s3 mb s3://my-bucket
+```
 
-See [LICENSE](./LICENSE) for details
+## Module Guides
 
-## 🙏 Acknowledgments
+| Module | Study Guide | Lab Location |
+|--------|-------------|--------------|
+| **Module 1** | [Infrastructure Guide](./docs/module-01/) | [`module-01/`](./module-01/) |
+| **Module 2** | Coming soon | [`module-02/`](./module-02/) |
+| **Module 3** | Coming soon | [`module-03/`](./module-03/) |
 
-Built for MLOps training and education purposes.
+## Prerequisites
+
+- Basic Python knowledge
+- Machine learning concepts
+- Command-line interface familiarity
+- Docker Desktop installed
+
+## Study Path
+
+1. **[Start with the Study Guide](./docs/)** - Complete overview
+2. **Module 1: Infrastructure** - Docker, Terraform, AWS
+3. **Module 2: Model Deployment** - Batch and API patterns
+4. **Module 3: Testing & CI/CD** - Automation pipelines
+
+## Contributing
+
+This is a training repository. See [CONTRIBUTING.md](./CONTRIBUTING.md)
+
+---
+
+**Start Learning:** [docs/README.md](./docs/) ← Complete study guide

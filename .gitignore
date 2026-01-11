@@ -45,8 +45,6 @@ ENV/
 *.tfstate
 *.tfstate.*
 .terraform/
-.terraform.lock.hcl
-terraform.tfvars
 *.tfplan
 
 # Docker
