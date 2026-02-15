@@ -115,3 +115,6 @@ pnpm-debug.log*
 # VitePress build output
 docs/.vitepress/cache/
 docs/.vitepress/dist/
+
+module-01/git/another-dev/
+module-01/git/git-practice/
